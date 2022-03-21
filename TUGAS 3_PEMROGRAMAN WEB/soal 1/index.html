@@ -1,0 +1,83 @@
+<html>
+<head><title>Mhs.com</title></head>
+<body>
+    <p><script language="javascript">
+
+
+function hitung()
+{
+    var bil3=parseFloat (document.tform.Partisipasi.value);
+    if (isNaN(bil3))
+        bil3=0.0;
+    var bil4=parseFloat (document.tform.tugas.value);
+    if (isNaN(bil4))
+        bil4=0.0;
+    var bil5=parseFloat (document.tform.uts.value);
+    if (isNaN(bil5))
+        bil5=0.0;
+    var bil6=parseFloat (document.tform.uas.value);
+    if (isNaN(bil6))
+        bil6=0.0;
+    var ip      = "";
+    var ket     = "";
+    var Nilai=(((bil3*10)/100) + ((20*bil4)/100) + ((30*bil5)/100)+((40*bil6)/100))
+    if((Nilai > 80) && (Nilai <=100))
+        {
+
+        ip="A";
+        ket="Selamat Anda LULUS"; 
+        }
+        else if ((Nilai > 69) && (Nilai<=80))
+        {
+        ip="B";
+        ket="Selamat Anda LULUS";
+        }
+        else if ((Nilai > 55) && (na<=69))
+        {
+        ip="C";
+        ket="Selamat Anda LULUS";
+        }
+        else if ((na > 38) && (na<=55))
+        {
+        ip="D";
+        ket="Anda TIDAK LULUS";
+        }
+        else
+        {
+        ip="E";
+        ket="Anda TIDAK LULUS";
+        } 
+        document.tform.ipk.value=ip;
+        document.tform.ket.value=ket;
+}
+//--></script></p>
+<table border="1" align="center"width="70%">
+<FORM NAME="tform">   
+    <tr>
+        <td width="100%" colspan="2"><H2 ALIGN="center">Hitung Nilai IPK</H2></td>
+    </tr>
+    <tr>
+    <td>
+        <PRE>
+        Nama         :<input type="text" size="11" name="Nama">
+        NIM          :<input type="text" size="11" name="NIM">
+        Partisipasi  :<input type="text" size="11" name="Partisipasi">
+        Tugas        :<input type="text" size="11" name="tugas">
+        UTS          :<input type="text" size="11" name="uts">
+        UAS          :<input type="text" size="11" name="uas">
+        </PRE>
+    </td>
+    </tr>
+    <tr align="center">
+        <td>
+        <input type="button" value="Hitung" onclick="hitung()">
+        <input type="reset" value="ulang">
+        </td>
+    </tr>
+    <tr align="center">
+        <td colspan="4" width="50%" align="center">Indeks Prestasi <input type="text" size="10" name="ipk">Keterangan<input type="text" size="20" name="ket"></td>
+    </tr>
+    </FORM>
+</table>
+</BODY>
+</HTML>
